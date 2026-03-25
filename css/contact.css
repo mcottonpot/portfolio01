@@ -1,0 +1,169 @@
+/* =========================================
+1. フォーム全体のレイアウト
+   ========================================= */
+.form-container {
+  max-width: 673px;
+  width: 100%;
+  padding: 70px 0 161px;
+}
+
+/* 各入力項目のグループ（上下の余白） */
+.form-group {
+  margin-bottom: 32px;
+}
+
+/* 2つ目のメール入力欄の上の余白を詰める（お好みで調整） */
+.email-second-input {
+  margin-top: -23px;
+  /* 上の項目との距離を少し縮める */
+}
+
+/* =========================================
+2. ラベル（項目名）の装飾
+   ========================================= */
+.form-group label {
+  display: block;
+  /* ラベルを独立した行にする */
+  margin-bottom: 8px;
+  /* 入力欄との隙間 */
+  font-weight: 400;
+}
+
+/* 必須マーク「*」の装飾 */
+.form-group label span {
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.privacy-policy {
+  display: block;
+  /* ラベルを独立した行にする */
+  margin-bottom: 8px;
+  /* 入力欄との隙間 */
+  font-weight: 400;
+}
+
+/* =========================================
+3. 入力ボックス本体（input / textarea）
+   ========================================= */
+.form-group input,
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px 20px;
+  /* ボックス内の余白 */
+  border: 1px solid #185946;
+  /* 枠線の太さと色 */
+  border-radius: 100px;
+  height: 54px;
+  box-sizing: border-box;
+  /* パディングを含めて幅を計算する*/
+  font-size: 16px;
+  /* 入力文字の大きさ*/
+}
+
+#content {
+  border-radius: 16px;
+  height: 240px;
+  margin-bottom: -8px;
+}
+
+/* 姓名を横に並べる設定 */
+.name-fields {
+  display: flex;
+  /* 横並びにする */
+  gap: 32px;
+  /* 姓名の間の隙間 */
+}
+
+.name-fields input {
+  flex: 1;
+  /* 姓名を50%ずつの幅にする */
+}
+
+/* =========================================
+4. プライバシーポリシーエリア
+   ========================================= */
+.privacy-policy-section {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* 規約文が入るスクロールボックス */
+.policy-text-box {
+  border: 1px solid #185946;
+  border-radius: 16px;
+  /* padding: 15px 32px; */
+  padding: 20px 37px 20px 20px;
+  height: 200px;
+  /* 高さを固定 */
+  overflow-y: auto;
+  /* 溢れたらスクロールさせる */
+  margin-bottom: 32px;
+}
+
+.policy-text-box p {
+  font-size: 16px;
+}
+
+/* スクロールバー全体の幅を調整（太くする） */
+.policy-text-box::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* スクロールバーの「つまみ」 */
+.policy-text-box::-webkit-scrollbar-thumb {
+  background-color: rgba(24, 89, 70, 0.5);
+  opacity: 50%;
+  border-radius: 10px;
+  height: 100px;
+}
+
+
+/* 同意チェックボックスの中央揃え */
+.policy-agree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#policy {
+  width: 24px;
+  height: 24px;
+}
+
+.policy-agree label {
+  display: flex;
+  align-items: center;
+}
+
+/* =========================================
+5. 送信（確認）ボタン
+   ========================================= */
+.submit-button-container {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.submit-button {
+  background-color: #107E5F;
+  color: #fff;
+  font-size: 20px;
+  padding: 16px;
+  border: none;
+  appearance: none;
+  border-radius: 40px !important;
+  /* リセットCSSが勝っていたため。望ましくない使い方？ */
+  font-weight: 400;
+  width: 200px;
+  transition: background-color 0.3s;
+  /* 色の変化を滑らかに */
+}
+
+/* ボタンにマウスを乗せた時 */
+.submit-button:hover {
+  background-color: #009E71;
+  /* 少し濃い緑に */
+}

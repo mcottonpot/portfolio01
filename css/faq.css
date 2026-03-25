@@ -1,0 +1,129 @@
+.container.page-faq {
+  max-width: 1120px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.faq-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.faq-box {
+  display: flex;
+  gap: 16px;
+}
+
+.title-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-title {
+  display: flex;
+  gap: 4px;
+  max-width: 1048px;
+  width: 100%;
+}
+
+/* アコーディオン */
+.accordion-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 35px 0 120px;
+}
+
+/* 各アコーディオン項目 */
+.accordion-item {
+  border-bottom: 1px solid #18594633;
+  margin-bottom: 0;
+  padding: 32px 0;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+
+/* アイコン全体の親要素 */
+.accodion-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* 横棒と縦棒の共通スタイル */
+.accodion-icon::before {
+  content: "";
+  position: absolute;
+  background-color: #185946;
+}
+
+/* 横棒（常に表示 = マイナス） */
+.accodion-icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+/* 縦棒（追加：プラスにするためのパーツ） */
+.accodion-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #185946;
+  width: 2px;     /* 横幅を細く */
+  height: 16px;    /* 高さを出す */
+  transition: transform 0.3s; /* 動きを滑らかにする */
+}
+
+/* 質問（タイトル部分） */
+.accordion-title {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  list-style: none;
+}
+
+/* 「Q.」の部分専用のスタイル */
+.question-prefix {
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  font-weight: 400;
+  margin-right: 8px;
+}
+
+/* 「A.」の部分専用のスタイル */
+.answer-prefix {
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  font-weight: 400;
+  opacity: 50%;
+  /* margin-right: 4px; */
+}
+
+回答（コンテンツ部分
+.accordion-content {
+  font-size: 16px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0;
+  display: none;
+  gap: 4px;
+}
+
+.question.open .accodion-icon::after {
+  transform: rotate(90deg); 
+}

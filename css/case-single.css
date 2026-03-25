@@ -1,0 +1,21 @@
+.case-single-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1352px;
+  padding: 42px 20px 0;
+}
+
+.single {
+  max-width: 1120px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+  padding: 80px 20px 120px;
+}
+
+.single-btn {
+  margin-top: 32px;
+}

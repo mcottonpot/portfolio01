@@ -1,0 +1,46 @@
+.case-items {
+  display: flex;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 120px 20px 200px;
+}
+
+.case-items .item {
+  width: calc(33.33% - 40px * 2 / 3);
+  box-sizing: border-box;
+}
+
+.item-img {
+  overflow: hidden;
+}
+
+.case-link img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.case-link:hover img {
+  opacity: 0.7;
+  transform: scale(1.05);
+  transition: opacity 0.3s;
+}
+
+.case-textarea {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 69px;
+  height: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #185946;
+}

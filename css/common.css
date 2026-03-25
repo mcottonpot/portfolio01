@@ -1,0 +1,554 @@
+/* ベース */
+
+
+
+body {
+  color: #185946;
+  font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", "Yu Gothic", YuGothic, "メイリオ", Meiryo, '源ノ角ゴシック JP', sans-serif;
+  ;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+/* 共通パーツ */
+.container {
+  margin: 0 auto;
+}
+
+.main {
+  padding-top: 92px;
+}
+
+/* 最初は透明で、少し下に配置 */
+.fadeIn_up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+
+.fadeIn_up.is-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ヘッダー */
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 92px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.header-gnav-area {
+  background-color: #F6F8F8;
+  padding: 14px 40px;
+  border-radius: 50px;
+}
+
+
+.header-container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  max-width: 1312px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: content-box;
+}
+
+.header-gnav {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+
+.gnav-list {
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+  color: #185946;
+  gap: 24px;
+}
+
+.gnav-item>a {
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  color: #185946;
+  font-weight: 400;
+}
+
+.btn {
+  margin-left: 80px;
+}
+
+.gnav-btn>a {
+  font-family: "IBM Plex Sans";
+  background-color: #107E5F;
+  color: #fff;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.gnav-btn>a:hover {
+  background-color: #009E71;
+}
+
+
+
+/* ファーストビュー */
+
+.fv {
+  padding-top: 128px;
+}
+
+.container.fv-container {
+  max-width: 1352px;
+  padding: 0 20px;
+}
+
+.fv-copy {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.main-copy-img {
+  margin-right: 40px;
+}
+
+.main-copy {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.fv-main-copy {
+  font-family: "IBM Plex Sans";
+  opacity: 50%;
+}
+
+.fv-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+
+/* セクションABOUT */
+
+.about {
+  padding: 160px 0 120px;
+}
+
+.about-container {
+  max-width: 896px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contents {
+  max-width: 856px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 300;
+  width: fit-content;
+}
+
+.about-img {
+  width: 48.5%;
+}
+
+.text-box {
+  /* max-width: 380px; */
+  width: 44.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.copy {
+  color: #185946;
+  width: fit-content;
+}
+
+.text-area .copy:not(:first-child) {
+  margin-top: 20px;
+}
+
+.a .btn-section {
+  font-size: 14px;
+}
+
+.btn-section {
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  display: flex;
+  /* テキストと矢印を横並びにする */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  width: 280px;
+  height: 64px;
+  justify-content: space-between;
+  /* テキストと矢印を両端に配置 */
+  padding: 20px;
+  background-color: #f6f8f8;
+  color: #185946;
+  border: none;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-section:hover .arrow01 {
+  background-color: #009E71;
+}
+
+.arrow01 {
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 24px;
+  background-color: #107e5f;
+  border-radius: 20px;
+  /* margin-left: 15px; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* セクションCASE */
+
+.case {
+  background-image: url(../img/home/case-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 160px 0 0;
+}
+
+.case-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-img {
+  /* width: 100%; */
+  height: auto;
+  margin-top: 102px;
+}
+
+.title-area-case {
+  margin-bottom: 40px;
+}
+
+.case-top-title {
+  white-space: nowrap;
+}
+
+
+/* セクションNEWS */
+
+.news {
+  padding: 200px 0;
+}
+
+.news-container {
+  max-width: 1128px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-area-news {
+  margin: 0;
+}
+
+.title-en {
+  font-family: "IBM Plex Sans";
+  font-size: 96px;
+  font-weight: 100;
+  max-width: fit-content;
+  line-height: 100%;
+}
+
+.title-news {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-items: right;
+  margin-bottom: 40px;
+}
+
+.copy-news {
+  /* display: block; */
+  width: 100%;
+  text-align: right;
+  /* margin-bottom: 40px; */
+}
+
+.news-block {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  max-width: 640px;
+  width: 100%;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.news-item a :hover {
+  background-color: #107E5F;
+}
+
+.news-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.news-link time {
+  font-size: 14px;
+}
+
+/* .news-img {
+  margin-right: 12px;
+} */
+
+.news-textarea {
+  /* max-width: 640px; */
+  flex-grow: 1;
+}
+
+.item-title {
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 168px;
+  margin-bottom: 8px;
+}
+
+.icon-notice {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #107E5F;
+  border-radius: 15px;
+  width: 86px;
+  height: 20px;
+}
+
+.icon-event {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #107E5F;
+  border-radius: 15px;
+  width: 83px;
+  height: 20px;
+}
+
+.arrow02 {
+  font-family: "IBM Plex Sans";
+  font-size: 28px;
+  color: #185946;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 24px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #185946;
+  /* margin-left: 15px; */
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.line01 {
+  border-top: 1px solid #107E5F;
+  opacity: 20%;
+  width: 100%;
+  margin: 0;
+}
+
+.news-time {
+  color: #185946;
+}
+
+
+
+
+
+/* セクションCONTACT*/
+
+.contact {
+  padding: 0 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #185946;
+  max-width: 1312px;
+  border-radius: 20px;
+  padding: 80px 64px;
+  margin-bottom: 120px;
+}
+
+.title-en-g {
+  font-family: "IBM Plex Sans";
+  font-size: 96px;
+  color: #fff;
+  font-weight: 100;
+  width: fit-content;
+}
+
+.title-area-contact {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.line02 {
+  width: 100%;
+  margin: 0;
+}
+
+.tel {
+  font-family: "IBM Plex Sans";
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.copy-contact {
+  color: #fff;
+}
+
+.btn-section-contact {
+  background-color: #fff;
+}
+
+.textarea {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1184px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.contact-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sp-only {
+  display: none;
+}
+
+.pc-only {
+  display: inline;
+}
+
+
+/* フッター */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1352px;
+  width: 100%;
+  padding: 80px 20px;
+  margin: 0 auto;
+}
+
+.line03 {
+  border-top: 1px solid #107E5F;
+  opacity: 20%;
+  max-width: 1312px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.footer-copy {
+  margin-bottom: 32px;
+}
+
+.address {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-copyrihgt {
+  font-size: 14px;
+}
+
+.footer-gnav-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-gnav-group {
+  width: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-gnav-item>a {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  color: #185946;
+  font-weight: 300;
+}

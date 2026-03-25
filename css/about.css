@@ -1,0 +1,149 @@
+/* パンくずリスト */
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  /*横に並ぶように*/
+  list-style: none;
+  font-size: 14px;
+}
+
+.breadcrumb li:after {
+  /* >を表示*/
+  content: '>';
+  padding: 8px;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* ファーストビュー（共通） */
+
+.page-titlearea {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.about-fv-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1352px;
+  padding: 42px 20px 0;
+}
+
+.title-about {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 20px;
+}
+
+.title-en.page {
+  font-weight: 200;
+  font-size: 120px;
+}
+
+.fv-about-img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 46px 20px 0;
+}
+
+
+
+/* セクションコンセプト */
+
+.concept {
+  padding: 120px 0 160px;
+}
+
+.container-concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.headline {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 40px;
+}
+
+
+
+/* セクションサービス */
+.container-service {
+  max-width: 1280px;
+  width: 100%;
+  background-image: url(../img/about/about-bg.png);
+  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.titlearea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+/* セクションMVV */
+
+.MVV {
+  padding: 221px 0 225px;
+}
+
+
+.copy-en {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+}
+
+.img-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 120px;
+}
+
+.small-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
